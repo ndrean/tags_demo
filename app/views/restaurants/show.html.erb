@@ -1,0 +1,14 @@
+<h1>Restaurants#show</h1>
+<p>Find me in app/views/restaurants/show.html.erb</p>
+
+
+<h1><%= @restaurant.name %></h1>
+<%= @restaurant.tag_list %>
+
+
+<h3>Related Restaurants with same tags</h3>
+<ul>
+  <% @related_restaurants.each do |r| %>
+    <li><%= r.name %></li>
+  <% end %>
+</ul>

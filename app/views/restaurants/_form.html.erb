@@ -1,0 +1,9 @@
+<%= simple_form_for restaurant, url: '/form' do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <!-- Add tags as a comma separated list -->
+  <%#= f.input :tag_list, label: "Add tags", hint: "Add your tags, separated by commas" %>
+  <!-- Add tags as checkboxes -->
+  <%= f.input :tag_list, as: :check_boxes, collection: [ "Premier", 'Deuxième', 'Troisième' ] %>
+  <%= f.submit %>
+<% end %>

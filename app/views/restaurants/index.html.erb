@@ -1,0 +1,10 @@
+https://kitt.lewagon.com/knowledge/tutorials/acts_as_taggable
+
+<% @restaurants.each do |r| %>
+  <h2><%= r.name %></h2>
+  <p>
+    <% r.tag_list.each do |tag| %>
+      <%= link_to tag, tagged_path(tag: tag) %>
+    <% end %>
+  </p>
+<% end %>
